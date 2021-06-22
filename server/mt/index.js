@@ -31,6 +31,7 @@ function bindRouting(server) {
       route(server, 'GET', '/api/saved_objects/_find');
       route(server, 'GET', '/api/kibana/management/saved_objects/_find');
       route(server, 'POST', '/api/saved_objects/_bulk_get');
+      route(server, 'POST', '/api/saved_objects/_export');
     });
 }
 
