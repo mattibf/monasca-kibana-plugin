@@ -39,9 +39,9 @@ module.exports = (server, method, route) => {
     case '/api/saved_objects/_bulk_get':
       options = require('./routes/bulk_get')(server, method, path);
       break;
-    case '/api/saved_objects/_export':
+    /* case '/api/saved_objects/_export':
       options = require('./routes/export')(server, method, path);
-      break;
+      break; */
     default:
       if (/\/api.*\/saved_objects\/_find/.test(route)) {
         options = require('./routes/find')(server, method, path);
