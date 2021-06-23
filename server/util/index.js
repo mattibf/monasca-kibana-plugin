@@ -37,7 +37,8 @@ function keystoneUrl(config) {
 }
 
 function getRequestPath(request) {
-  server.log(['MKP','status', 'debug', 'server/util'], 'getRequestPath: request.url.path: ${request.url.path}');
+  console.log("MKP: Status: server/until/index.js: getRequestPath: request.url.path: ${request.url.path}");
+  //server.log(['MKP','status', 'debug', 'server/util'], 'getRequestPath: request.url.path: ${request.url.path}');
   return request.url.path;
 }
 
@@ -48,7 +49,8 @@ function isESRequest(request) {
 function isSavedObjectsRequest(request) {
   let url;
   url = getRequestPath(request);
-  server.log(['MKP','status', 'debug', 'server/util'], 'isSavedObjectsRequest: url: ${url}');
+  console.log("MKP: Status: server/until/index.js: isSavedObjectsRequest: url: ${url}");
+  //server.log(['MKP','status', 'debug', 'server/util'], 'isSavedObjectsRequest: url: ${url}');
   return /\/api.*\/saved_objects\/_/.test(getRequestPath(request));
 }
 
